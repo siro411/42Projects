@@ -1,10 +1,10 @@
-#include "list.h"
+#include "ft_list.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 t_list	*sort_list(t_list *lst, int (*cmp)(int, int))
 {
-	int		tmp;
+	void	*tmp;
 	t_list	*head;
 
 	head = lst;
@@ -12,7 +12,7 @@ t_list	*sort_list(t_list *lst, int (*cmp)(int, int))
 		return (NULL);
 	while (lst->next)
 	{
-		if (((*cmp)(lst->data, lst->next->data)) == 0)
+		if (((*cmp)((int)(long)lst->data, (int)(long)lst->next->data)) == 0)
 		{
 			tmp = lst->data;
 			lst->data = lst->next->data;
