@@ -77,10 +77,9 @@ char	**ft_split(char *str)
 int	main(void)
 {
 	int i = 0;
-	// char str[] = "You hate people! But I love gatherings. Isn't it ironic?";
-	char str[] = "You hate people!";
+	char str[] = "You hate people! But I love gatherings. Isn't it ironic?";
+	// char str[] = "You hate people!";
 	char **res = ft_split(str);
-	printf("size of res is %lu\n", sizeof(res));
 	while (res[i])
 	{
 		printf("%s\n", res[i]);
